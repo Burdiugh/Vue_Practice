@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f6f8;
+  padding: 40px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.title {
+  margin-bottom: 12px;
+}
+
+.description {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.steps {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background: #e0e0e0;
+  color: #777;
+  transition: all 0.2s ease;
+}
+
+.step-index {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+
+.step.completed {
+  background: #d1f3dc;
+  color: #1b5e20;
+}
+
+.step.active {
+  background: #4caf50;
+  color: #fff;
+}
+
+.step.active .step-index {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.step:hover:not(.active) {
+  opacity: 0.85;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.nav-btn.primary {
+  background: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

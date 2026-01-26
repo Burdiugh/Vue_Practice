@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Roadmap</title>
+    <link rel="stylesheet" href="buttonsRefactored.css" />
+  </head>
+  <body>
+    <div id="app" class="container">
+      <h1 class="title">План по изучению Vue.js</h1>
+
+      <p class="description">{{ currentStep.description }}</p>
+
+      <div class="steps">
+        <button
+          v-for="(step, index) in steps"
+          :key="step.id"
+          class="step"
+          :class="stepClass(index)"
+          @click="goToStep(index)"
+        >
+          <span class="step-index">{{ index + 1 }}</span>
+          {{ step.title }}
+        </button>
+      </div>
+
+      <div v-if="!isLastStep">
+        <div class="navigation">
+          <button class="nav-btn" @click="prevStep" :disabled="isFirstStep">
+            Назад
+          </button>
+
+          <button
+            class="nav-btn primary"
+            @click="nextStep"
+            :disabled="isLastStep"
+          >
+            Вперед
+          </button>
+        </div>
+      </div>
+      <div v-else>
+        <button class="nav-btn primary" @click="activeStep = 0">
+          Начать заново
+        </button>
+      </div>
+    </div>
+
+    <!-- Vue 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="buttonsRefactored.js"></script>
+  </body>
+</html>
