@@ -24,6 +24,7 @@
   background-color: white;
   width: 700px;
   border-radius: 3px;
+  margin-bottom: 20px;
 }
 .main-content-container {
   padding: 16px 16px;
@@ -31,21 +32,88 @@
 
 .button {
   background-color: white;
-  color: black;
   padding: 15px 32px;
   text-align: center;
-  border: 3px solid #04aa6d;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
   border-radius: 6px;
 }
+
+.button.primary {
+  border: 3px solid #04aa6d;
+  color: black;
+}
+
+.button.danger {
+  border: 3px solid red;
+  color: red;
+}
+
+.button.warning {
+  border: 3px solid yellow;
+  color: yellow;
+}
+
 button.disabled {
   background-color: #ccc; /* greyed out */
   cursor: not-allowed;
   opacity: 0.6;
 }
-.button:hover {
+.button.primary:hover {
   background-color: #04aa6d;
   color: white;
+}
+.button.danger:hover {
+  background-color: red;
+  color: white;
+}
+.button.warning:hover {
+  background-color: yellow;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul li {
+  float: right;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+a.router-link-active {
+  font-weight: bold;
+  color: green;
+}
+
+a.router-link-exact-active {
+  background-color: lightblue;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }

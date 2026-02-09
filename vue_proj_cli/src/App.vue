@@ -1,21 +1,23 @@
 <template>
+  <header>
+    <app-navbar></app-navbar>
+  </header>
   <main>
-    <app-home-page></app-home-page>
+    <RouterView />
   </main>
 </template>
 
 <script setup>
-import AppHomePage from "./AppHomePage.vue";
+import AppNavbar from "./layouts/AppNavbar.vue";
 </script>
 
 <script>
 export default {
-  data() {
-    return {};
-  },
-  methods: {},
-  components: {
-    "app-home-page": AppHomePage,
+  setup() {
+    //
+    return {
+      //
+    };
   },
 };
 </script>
@@ -24,6 +26,5 @@ export default {
 #app {
   min-height: 100vh;
   background-color: #2c3e50;
-  padding-top: 40px;
 }
 </style>
